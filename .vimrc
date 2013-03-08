@@ -42,6 +42,4 @@ nmap <silent> <Leader>p :NERDTreeToggle<CR>
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
 
-"autocmd FileType python set ft=python.django " For SnipMate
-"autocmd FileType html set ft=htmldjango.html " For SnipMate
-"au BufNewFile,BufRead *.less set filetype=less
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
