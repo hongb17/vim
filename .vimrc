@@ -8,6 +8,7 @@ set incsearch
 set undofile
 set encoding=utf-8
 set hlsearch
+set number
 set ruler
 set ts=4
 set sw=4
