@@ -16,8 +16,9 @@ set expandtab
 
 execute pathogen#infect()
 
-colorscheme molokai
-let g:molokai_original = 1
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
 
 nnoremap ; :
 nnoremap <leader>w <C-w>v<C-w>l
