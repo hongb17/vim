@@ -12,7 +12,7 @@ set number
 set ruler
 set ts=4
 set sw=4
-set expandtab
+"set expandtab
 
 execute pathogen#infect()
 
@@ -22,6 +22,7 @@ let g:molokai_original = 1
 nnoremap ; :
 nnoremap <leader>w <C-w>v<C-w>l
 nmap \l :setlocal number!<CR>
+nmap \f gg=G
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
