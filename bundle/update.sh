@@ -24,3 +24,6 @@ cd ..
 cd vim-colors-solarized
 git pull
 cd ..
+cd snipmate.vim
+git pull
+cd ..
