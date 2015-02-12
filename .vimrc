@@ -1,6 +1,7 @@
 syntax on
 filetype on
 filetype plugin on
+filetype plugin indent on
 set smarttab
 set autoindent
 set nocompatible
@@ -12,7 +13,7 @@ set number
 set ruler
 set ts=4
 set sw=4
-"set expandtab
+set expandtab
 
 execute pathogen#infect()
 
@@ -45,4 +46,11 @@ nmap <silent> <Leader>p :NERDTreeToggle<CR>
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
 
+"Copy and paste
+vmap <C-c> "+yi
+vmap <C-c> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <ESC>"+pa
+
 "autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+
