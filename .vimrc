@@ -22,9 +22,10 @@ set background=dark
 colorscheme solarized
 
 nnoremap ; :
-nnoremap <leader>w <C-w>v<C-w>l
 nmap \l :setlocal number!<CR>
 nmap \f gg=G
+nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <leader>h <C-w>s<C-w>j
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
