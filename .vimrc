@@ -12,11 +12,10 @@ Plugin 'gmarik/Vundle.vim'
 
 " Plugins
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-airline'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
-" Plugin 'powerline/powerline'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
@@ -93,3 +92,5 @@ cmap w!! %!sudo tee > /dev/null %
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
 
 let g:UltiSnipsExpandTrigger="<c-j>"
+
+set laststatus=2
