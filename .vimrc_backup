@@ -1,0 +1,25 @@
+
+syntax on
+filetype on
+filetype plugin on
+filetype plugin indent on
+set smarttab
+set autoindent
+set nocompatible
+set incsearch
+set undofile
+set encoding=utf-8
+set hlsearch
+set number
+set ruler
+set ts=4
+set sw=4
+set expandtab
+
+""Map TlistToggle to \t
+"nmap <silent> <Leader>t :TlistToggle<CR>
+
+"indent
+"let g:indent_guides_start_level=2
+"let g:indent_guides_guide_size=1
+
