@@ -11,12 +11,12 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Plugins
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
-" Plugin 'powerline/powerline'
+ Plugin 'powerline/powerline'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
@@ -25,6 +25,8 @@ Plugin 'tpope/vim-surround'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+set backspace=2 " make backspace work like most other apps
 
 let g:solarized_termcolors=256
 set background=dark
