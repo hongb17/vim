@@ -16,7 +16,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
- Plugin 'powerline/powerline'
+" Plugin 'powerline/powerline'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
@@ -26,7 +26,12 @@ Plugin 'tpope/vim-surround'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+syntax on
 set backspace=2 " make backspace work like most other apps
+set encoding=utf-8
+set ts=4
+set sw=4
+set number
 
 let g:solarized_termcolors=256
 set background=dark
