@@ -11,27 +11,54 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Plugins
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
+Plugin 'Chiel92/vim-autoformat'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
 " Plugin 'powerline/powerline'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-surround'
+Plugin 'Valloric/YouCompleteMe'
+
+Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-syntax on
-set backspace=2 " make backspace work like most other apps
 set encoding=utf-8
+syntax on
+" Configure backspace so it acts as it should act
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
 set ts=4
 set sw=4
+" Be smart when using tabs ;)
+set smarttab
 set number
+set ruler
+" Highlight search results
+set hlsearch
+" Makes search act like search in modern browsers
+set incsearch
+" Show matching brackets when text indicator is over them
+set showmatch
+" How many tenths of a second to blink when matching brackets
+set mat=2
+
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+" Treat long lines as break lines (useful when moving around in them)
+map j gj
+map k gk
 
 let g:solarized_termcolors=256
 set background=dark
@@ -64,3 +91,5 @@ cmap w!! %!sudo tee > /dev/null %
 
 "Map NERDTree to \p
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
+
+let g:UltiSnipsExpandTrigger="<c-j>"
