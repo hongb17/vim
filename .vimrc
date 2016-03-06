@@ -23,6 +23,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-surround'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'derekwyatt/vim-scala'
 
 Plugin 'fatih/vim-go'
 
@@ -94,3 +95,8 @@ nmap <silent> <Leader>p :NERDTreeToggle<CR>
 let g:UltiSnipsExpandTrigger="<c-j>"
 
 set laststatus=2
+
+" Make the scala file save faster.
+let g:syntastic_mode_map = { "mode": "active",
+                           \ "active_filetypes": [],
+                           \ "passive_filetypes": ["scala"] }
