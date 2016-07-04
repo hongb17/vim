@@ -23,9 +23,12 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-surround'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'derekwyatt/vim-scala'
+Plugin 'fholgado/minibufexpl.vim'
 
+Plugin 'derekwyatt/vim-scala'
 Plugin 'fatih/vim-go'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -36,8 +39,8 @@ syntax on
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
-set ts=4
-set sw=4
+set ts=2
+set sw=2
 " Be smart when using tabs ;)
 set smarttab
 set number
@@ -59,6 +62,12 @@ set tm=500
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
 map k gk
+
+" Undo
+set undofile                " Save undo's after file closes
+set undodir=$HOME/.vim/undo " where to save undo histories
+set undolevels=1000         " How many undos
+set undoreload=10000        " number of lines to save for undo
 
 let g:solarized_termcolors=256
 set background=dark
@@ -100,3 +109,5 @@ set laststatus=2
 let g:syntastic_mode_map = { "mode": "active",
                            \ "active_filetypes": [],
                            \ "passive_filetypes": ["scala"] }
+
+let g:jsx_ext_required = 0
