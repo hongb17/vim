@@ -52,8 +52,13 @@ ZSH_THEME="robbyrussell"
 plugins=(git autojump osx)
 
 # User configuration
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_74.jdk/Contents/Home
+export ANDROID_HOME=/Users/chun/Library/Android/sdk
+export GOPATH=/Users/chun/program/go
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$ANDROID_HOME/platform-tools:$GOPATH/bin"
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -84,13 +89,37 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 
+export GIT_EDITOR=vim
+
+unsetopt nomatch
+
 alias tom='ssh root@192.34.56.215'
-alias tov='ssh chun@45.32.19.29'
+alias tom2='ssh chun@138.68.59.141'
+alias xkdev='ssh chun@120.77.72.197'
+
 alias bu='brew update && brew upgrade && brew cleanup'
-alias pu='pip install --upgrade pip && python ~/program/upgrade-pip.py'
-alias rs='source ~/.zshrc'
+alias rz='source ~/.zshrc'
+
+alias xk='source ~/PycharmProjects/xkool_venv_py3/bin/activate;cd ~/program/XiaoKu/website'
+alias xka='source /Users/chun/program/XiaoKu/venv/xk_algorithm_venv/bin/activate;cd ~/program/XiaoKu/algorithm'
+alias xkm='source /Users/chun/program/XiaoKu/venv/xk_model_venv/bin/activate;cd ~/program/XiaoKu/model'
+alias xkd='source /Users/chun/program/XiaoKu/venv/xk_diagram_env/bin/activate;cd ~/program/XiaoKu/diagram'
+alias xkf='cd ~/program/XiaoKu/frontend'
+alias sv='source /Users/chun/program/venv/stock/bin/activate;cd ~/program/stock/new_scrapy'
+alias tf='source /Users/chun/program/venv/tensorflow/bin/activate;cd ~/program/tensorflow'
 
 alias gs='git status'
 alias gco='git checkout'
+alias gd='git diff'
 
 alias v='vim'
+alias rn='react-native'
+
+alias python='python3'
+alias pip='pip3'
+
+alias fixv='sudo killall VDCAssistant'
+alias fixa='sudo killall coreaudiod'
+
+alias ss1='ss-local -c ~/ss1.config'
+alias ss2='ss-local -c ~/ss2.config'

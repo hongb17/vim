@@ -39,8 +39,8 @@ syntax on
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
-set ts=2
-set sw=2
+set ts=4
+set sw=4
 " Be smart when using tabs ;)
 set smarttab
 
