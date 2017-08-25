@@ -1,0 +1,10 @@
+# Ctrl+W to delete the previous word
+bind "^W" ed-delete-prev-word
+# Ctrl+U to delete the current line contents
+bind "^U" vi-kill-line-prev
+# Ctrl+R to search the query history
+bind "^R" em-inc-search-prev
+# Ctrl+Left Arrow to go the previous word
+bind "\e[1;5D" vi-prev-word
+# Ctrl+Right Arrow to go to the next word
+bind "\e[1;5C" vi-next-word

@@ -91,6 +91,8 @@ source $ZSH/oh-my-zsh.sh
 
 export GIT_EDITOR=vim
 
+bindkey \^U backward-kill-line
+
 unsetopt nomatch
 
 alias tom='ssh root@192.34.56.215'
@@ -100,10 +102,11 @@ alias xkdev='ssh chun@120.77.72.197'
 alias bu='brew update && brew upgrade && brew cleanup'
 alias rz='source ~/.zshrc'
 
-alias xk='source ~/PycharmProjects/xkool_venv_py3/bin/activate;cd ~/program/XiaoKu/website'
-alias xka='source /Users/chun/program/XiaoKu/venv/xk_algorithm_venv/bin/activate;cd ~/program/XiaoKu/algorithm'
-alias xkm='source /Users/chun/program/XiaoKu/venv/xk_model_venv/bin/activate;cd ~/program/XiaoKu/model'
+alias xk='source /Users/chun/program/XiaoKu/venv/xk_backend/bin/activate;cd ~/program/XiaoKu/backend'
+alias xka='source /Users/chun/program/XiaoKu/venv/xk_algorithm/bin/activate;cd ~/program/XiaoKu/algorithm'
 alias xkd='source /Users/chun/program/XiaoKu/venv/xk_diagram_env/bin/activate;cd ~/program/XiaoKu/diagram'
+alias xkdwg='source /Users/chun/program/XiaoKu/venv/xk_dwg_reader/bin/activate;cd ~/program/XiaoKu/dwg_reader'
+alias xkdxf='source /Users/chun/program/XiaoKu/venv/dxf_reader/bin/activate;cd ~/program/XiaoKu/dxf_reader'
 alias xkf='cd ~/program/XiaoKu/frontend'
 alias sv='source /Users/chun/program/venv/stock/bin/activate;cd ~/program/stock/new_scrapy'
 alias tf='source /Users/chun/program/venv/tensorflow/bin/activate;cd ~/program/tensorflow'
@@ -123,3 +126,12 @@ alias fixa='sudo killall coreaudiod'
 
 alias ss1='ss-local -c ~/ss1.config'
 alias ss2='ss-local -c ~/ss2.config'
+
+alias xk1='ssh dev@120.77.72.19'
+alias xk2='ssh chun@120.76.52.238'
+
+# XKOOL
+export FLASK_CONFIGURATION='linux'
+export ALGORITHM_CONFIGURATION='linux'
+
+eval $(thefuck --alias)
