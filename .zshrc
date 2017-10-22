@@ -97,7 +97,10 @@ unsetopt nomatch
 
 alias tom='ssh root@192.34.56.215'
 alias tom2='ssh chun@138.68.59.141'
-alias xkdev='ssh chun@120.77.72.197'
+alias xkdev='ssh xkool@123.207.239.122'
+alias xkrc='ssh xkool@123.207.25.215'
+alias xkprod='ssh xkool@123.207.88.66'
+alias xkplay='ssh xkool@123.207.241.44'
 
 alias bu='brew update && brew upgrade && brew cleanup'
 alias rz='source ~/.zshrc'
@@ -107,6 +110,7 @@ alias xka='source /Users/chun/program/XiaoKu/venv/xk_algorithm/bin/activate;cd ~
 alias xkd='source /Users/chun/program/XiaoKu/venv/xk_diagram_env/bin/activate;cd ~/program/XiaoKu/diagram'
 alias xkdwg='source /Users/chun/program/XiaoKu/venv/xk_dwg_reader/bin/activate;cd ~/program/XiaoKu/dwg_reader'
 alias xkdxf='source /Users/chun/program/XiaoKu/venv/dxf_reader/bin/activate;cd ~/program/XiaoKu/dxf_reader'
+alias xkai='source /Users/chun/program/XiaoKu/venv/xkool_ai/bin/activate;cd ~/program/XiaoKu/xkool_ai'
 alias xkf='cd ~/program/XiaoKu/frontend'
 alias sv='source /Users/chun/program/venv/stock/bin/activate;cd ~/program/stock/new_scrapy'
 alias tf='source /Users/chun/program/venv/tensorflow/bin/activate;cd ~/program/tensorflow'
@@ -131,7 +135,10 @@ alias xk1='ssh dev@120.77.72.19'
 alias xk2='ssh chun@120.76.52.238'
 
 # XKOOL
-export FLASK_CONFIGURATION='linux'
-export ALGORITHM_CONFIGURATION='linux'
+export XKOOL_ENV='linux'
 
 eval $(thefuck --alias)
+alias f=fuck
+
+export OPENNI2_REDIST=/usr/local/lib/ni2
+export OPENNI2_INCLUDE=/usr/local/include/ni2
