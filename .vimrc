@@ -24,6 +24,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-surround'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'fholgado/minibufexpl.vim'
+Plugin 'leafgarland/typescript-vim'
 
 "Plugin 'derekwyatt/vim-scala'
 "Plugin 'fatih/vim-go'
@@ -34,15 +35,19 @@ Plugin 'mxw/vim-jsx'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
 set encoding=utf-8
+
 syntax on
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
-set ts=4
-set sw=4
+set ts=2
+set sw=2
 " Be smart when using tabs ;)
 set smarttab
+set expandtab
 
 set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
 
@@ -54,7 +59,7 @@ set number
 nmap \l :setlocal number!<CR>
 
 " Display extra whitespace
-set list listchars=tab:»·,trail:·,nbsp:·
+" set list listchars=tab:»·,trail:·,nbsp:·
 
 " Open new split panes to right and bottom, which feels more natural
 " set splitbelow
@@ -132,14 +137,23 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 
 set laststatus=2 " Always display the status line
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
 let g:syntastic_check_on_open = 1
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+"let g:syntastic_debug = 1
 " Make the scala file save faster.
 let g:syntastic_mode_map = { "mode": "active",
                            \ "active_filetypes": [],
                            \ "passive_filetypes": ["scala"] }
-let g:syntastic_javascript_checkers = ['jsxhint']
 let g:syntastic_python_flake8_exec = 'python3'
 let g:syntastic_python_flake8_args = ['-m', 'flake8']
-
-
+let g:syntastic_python_flake8_post_args = "--ignore=C0111,E501,E241"
+let g:syntastic_javascript_checkers = ['jsxhint']
 let g:jsx_ext_required = 0
+
+nmap <leader>e :Errors<CR>
+
