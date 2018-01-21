@@ -19,17 +19,16 @@ Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-surround'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
 Plugin 'fholgado/minibufexpl.vim'
-Plugin 'leafgarland/typescript-vim'
 
+"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'leafgarland/typescript-vim'
 "Plugin 'derekwyatt/vim-scala'
 "Plugin 'fatih/vim-go'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
+"Plugin 'pangloss/vim-javascript'
+"Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -149,11 +148,11 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_mode_map = { "mode": "active",
                            \ "active_filetypes": [],
                            \ "passive_filetypes": ["scala"] }
-let g:syntastic_python_flake8_exec = 'python3'
-let g:syntastic_python_flake8_args = ['-m', 'flake8']
-let g:syntastic_python_flake8_post_args = "--ignore=C0111,E501,E241"
-let g:syntastic_javascript_checkers = ['jsxhint']
-let g:jsx_ext_required = 0
+"let g:syntastic_python_flake8_exec = 'python3'
+"let g:syntastic_python_flake8_args = ['-m', 'flake8']
+"let g:syntastic_python_flake8_post_args = "--ignore=C0111,E501,E241"
+"let g:syntastic_javascript_checkers = ['jsxhint']
+"let g:jsx_ext_required = 0
 
 nmap <leader>e :Errors<CR>
 

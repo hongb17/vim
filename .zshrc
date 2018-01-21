@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/chun/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -52,11 +52,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git autojump osx)
 
 # User configuration
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_74.jdk/Contents/Home
-export ANDROID_HOME=/Users/chun/Library/Android/sdk
-export GOPATH=/Users/chun/program/go
-
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$ANDROID_HOME/platform-tools:$GOPATH/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -64,7 +60,7 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -97,42 +93,38 @@ unsetopt nomatch
 
 alias tom='ssh root@192.34.56.215'
 alias tom2='ssh chun@138.68.59.141'
-alias xkdev='ssh xkool@123.207.239.122'
-alias xkrc='ssh xkool@123.207.25.215'
-alias xkprod='ssh xkool@123.207.88.66'
+alias xkdev='ssh xkool@dev.xkool.org'
+alias xkrc='ssh xkool@rc.xkool.org'
+alias xkprod='ssh xkool@xkool.ai'
 alias xkplay='ssh xkool@123.207.241.44'
 
 alias bu='brew update && brew upgrade && brew cleanup'
 alias rz='source ~/.zshrc'
 
-alias xk='source /Users/chun/program/XiaoKu/venv/xk_backend/bin/activate;cd ~/program/XiaoKu/backend'
-alias xka='source /Users/chun/program/XiaoKu/venv/xk_algorithm/bin/activate;cd ~/program/XiaoKu/algorithm'
-alias xkd='source /Users/chun/program/XiaoKu/venv/xk_diagram_env/bin/activate;cd ~/program/XiaoKu/diagram'
-alias xkdwg='source /Users/chun/program/XiaoKu/venv/xk_dwg_reader/bin/activate;cd ~/program/XiaoKu/dwg_reader'
-alias xkdxf='source /Users/chun/program/XiaoKu/venv/dxf_reader/bin/activate;cd ~/program/XiaoKu/dxf_reader'
-alias xkai='source /Users/chun/program/XiaoKu/venv/xkool_ai/bin/activate;cd ~/program/XiaoKu/xkool_ai'
+alias xk='source ~/program/XiaoKu/venv/xk_backend/bin/activate;cd ~/program/XiaoKu/backend'
+alias xka='source ~/program/XiaoKu/venv/xk_algorithm/bin/activate;cd ~/program/XiaoKu/algorithm'
+alias xkd='source ~/program/XiaoKu/venv/xk_diagram_env/bin/activate;cd ~/program/XiaoKu/diagram'
+alias xkdwg='source ~/program/XiaoKu/venv/xk_dwg_reader/bin/activate;cd ~/program/XiaoKu/dwg_reader'
+alias xkdxf='source ~/program/XiaoKu/venv/dxf_reader/bin/activate;cd ~/program/XiaoKu/dxf_reader'
+alias xkai='source ~/program/XiaoKu/venv/xkool_ai/bin/activate;cd ~/program/XiaoKu/xkool_ai'
+alias xkbe='source ~/program/XiaoKu/venv/biennale_backend/bin/activate;cd ~/program/XiaoKu/biennale-backend'
 alias xkf='cd ~/program/XiaoKu/frontend'
-alias sv='source /Users/chun/program/venv/stock/bin/activate;cd ~/program/stock/new_scrapy'
-alias tf='source /Users/chun/program/venv/tensorflow/bin/activate;cd ~/program/tensorflow'
+alias xkad='cd ~/program/XiaoKu/admin'
 
 alias gs='git status'
 alias gco='git checkout'
 alias gd='git diff'
+alias gsu'git submodule update'
 
 alias v='vim'
-alias rn='react-native'
 
 alias python='python3'
 alias pip='pip3'
 
+alias av='source venv/bin/activate'
+
 alias fixv='sudo killall VDCAssistant'
 alias fixa='sudo killall coreaudiod'
-
-alias ss1='ss-local -c ~/ss1.config'
-alias ss2='ss-local -c ~/ss2.config'
-
-alias xk1='ssh dev@120.77.72.19'
-alias xk2='ssh chun@120.76.52.238'
 
 # XKOOL
 export XKOOL_ENV='linux'
@@ -140,5 +132,12 @@ export XKOOL_ENV='linux'
 eval $(thefuck --alias)
 alias f=fuck
 
-export OPENNI2_REDIST=/usr/local/lib/ni2
-export OPENNI2_INCLUDE=/usr/local/include/ni2
+# export OPENNI2_REDIST=/usr/local/lib/ni2
+# export OPENNI2_INCLUDE=/usr/local/include/ni2
+# export PATH="/usr/local/opt/opencv@2/bin:$PATH"
+
+# proxy list
+# alias proxy='export all_proxy=socks5://127.0.0.1:1086'
+# alias unproxy='unset all_proxy'
+#export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087;
+#
