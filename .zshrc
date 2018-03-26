@@ -52,6 +52,8 @@ ZSH_THEME="robbyrussell"
 plugins=(git autojump osx)
 
 # User configuration
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_74.jdk/Contents/Home
+
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
@@ -93,21 +95,13 @@ unsetopt nomatch
 
 alias tom='ssh root@192.34.56.215'
 alias tom2='ssh chun@138.68.59.141'
-alias xkdev='ssh xkool@dev.xkool.org'
-alias xkrc='ssh xkool@rc.xkool.org'
-alias xkprod='ssh xkool@xkool.ai'
-alias xkplay='ssh xkool@123.207.241.44'
+alias xkj='ssh -p4848 lc@139.199.16.240'
 
 alias bu='brew update && brew upgrade && brew cleanup'
 alias rz='source ~/.zshrc'
 
 alias xk='source ~/program/XiaoKu/venv/xk_backend/bin/activate;cd ~/program/XiaoKu/backend'
 alias xka='source ~/program/XiaoKu/venv/xk_algorithm/bin/activate;cd ~/program/XiaoKu/algorithm'
-alias xkd='source ~/program/XiaoKu/venv/xk_diagram_env/bin/activate;cd ~/program/XiaoKu/diagram'
-alias xkdwg='source ~/program/XiaoKu/venv/xk_dwg_reader/bin/activate;cd ~/program/XiaoKu/dwg_reader'
-alias xkdxf='source ~/program/XiaoKu/venv/dxf_reader/bin/activate;cd ~/program/XiaoKu/dxf_reader'
-alias xkai='source ~/program/XiaoKu/venv/xkool_ai/bin/activate;cd ~/program/XiaoKu/xkool_ai'
-alias xkbe='source ~/program/XiaoKu/venv/biennale_backend/bin/activate;cd ~/program/XiaoKu/biennale-backend'
 alias xkf='cd ~/program/XiaoKu/frontend'
 alias xkad='cd ~/program/XiaoKu/admin'
 
@@ -121,10 +115,13 @@ alias v='vim'
 alias python='python3'
 alias pip='pip3'
 
-alias av='source venv/bin/activate'
-
 alias fixv='sudo killall VDCAssistant'
 alias fixa='sudo killall coreaudiod'
+
+alias ss1='ss-local -c ~/ss1.config'
+alias ss2='ss-local -c ~/ss2.config'
+
+alias av='source venv/bin/activate'
 
 # XKOOL
 export XKOOL_ENV='linux'
