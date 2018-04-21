@@ -95,13 +95,15 @@ unsetopt nomatch
 
 alias tom='ssh root@192.34.56.215'
 alias tom2='ssh chun@138.68.59.141'
-alias xkj='ssh -p4848 lc@139.199.16.240'
 
 alias bu='brew update && brew upgrade && brew cleanup'
 alias rz='source ~/.zshrc'
 
-alias xk='source ~/program/XiaoKu/venv/xk_backend/bin/activate;cd ~/program/XiaoKu/backend'
-alias xka='source ~/program/XiaoKu/venv/xk_algorithm/bin/activate;cd ~/program/XiaoKu/algorithm'
+# XKOOL
+export XKOOL_ENV='linux'
+alias xkj='ssh -p4848 lc@139.199.16.240'
+alias xk='cd ~/program/XiaoKu/backend;av'
+alias xka='cd ~/program/XiaoKu/algorithm;av'
 alias xkf='cd ~/program/XiaoKu/frontend'
 alias xkad='cd ~/program/XiaoKu/admin'
 
@@ -123,11 +125,9 @@ alias ss2='ss-local -c ~/ss2.config'
 
 alias av='source venv/bin/activate'
 
-# XKOOL
-export XKOOL_ENV='linux'
-
 eval $(thefuck --alias)
 alias f=fuck
+alias grep='grep -n --color --exclude-dir=venv'
 
 # export OPENNI2_REDIST=/usr/local/lib/ni2
 # export OPENNI2_INCLUDE=/usr/local/include/ni2
