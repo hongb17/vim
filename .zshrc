@@ -101,7 +101,8 @@ alias rz='source ~/.zshrc'
 
 # XKOOL
 export XKOOL_ENV='linux'
-alias xkj='ssh -p4848 lc@139.199.16.240'
+alias xkjo='ssh -p4848 lc@139.199.16.240'
+alias xkj='ssh chun@120.77.201.198 -p4848'
 alias xk='cd ~/program/XiaoKu/backend;av'
 alias xka='cd ~/program/XiaoKu/algorithm;av'
 alias xkf='cd ~/program/XiaoKu/frontend'
@@ -124,17 +125,21 @@ alias ss1='ss-local -c ~/ss1.config'
 alias ss2='ss-local -c ~/ss2.config'
 
 alias av='source venv/bin/activate'
+alias dv='deactivate'
+alias vv='virtualenv venv'
 
 eval $(thefuck --alias)
 alias f=fuck
-alias grep='grep -n --color --exclude-dir=venv'
+alias grep='grep -n --color --exclude-dir=venv --exclude=*.pyc'
 
 # export OPENNI2_REDIST=/usr/local/lib/ni2
 # export OPENNI2_INCLUDE=/usr/local/include/ni2
 # export PATH="/usr/local/opt/opencv@2/bin:$PATH"
 
 # proxy list
-# alias proxy='export all_proxy=socks5://127.0.0.1:1086'
-# alias unproxy='unset all_proxy'
-#export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087;
-#
+alias goproxy='export http_proxy=http://127.0.0.1:1087 https_proxy=http://127.0.0.1:1087'
+alias disproxy='unset http_proxy https_proxy'
+
+export PATH="/usr/local/opt/gdal2/bin:$PATH"
+
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
