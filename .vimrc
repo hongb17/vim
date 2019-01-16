@@ -24,8 +24,8 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'leafgarland/typescript-vim'
 
-"Plugin 'leafgarland/typescript-vim'
 "Plugin 'derekwyatt/vim-scala'
 "Plugin 'fatih/vim-go'
 "Plugin 'pangloss/vim-javascript'
@@ -146,12 +146,13 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 "let g:syntastic_debug = 1
 " Make the scala file save faster.
-let g:syntastic_mode_map = { "mode": "active",
-                           \ "active_filetypes": [],
-                           \ "passive_filetypes": ["scala"] }
-"let g:syntastic_python_flake8_exec = 'python3'
-"let g:syntastic_python_flake8_args = ['-m', 'flake8']
-"let g:syntastic_python_flake8_post_args = "--ignore=C0111,E501,E241"
+"let g:syntastic_mode_map = { "mode": "active",
+"                           \ "active_filetypes": [],
+"                           \ "passive_filetypes": ["scala"] }
+let g:syntastic_python_flake8_exec = 'python3'
+let g:syntastic_python_flake8_args = ['-m', 'flake8']
+let g:syntastic_python_flake8_post_args = "--ignore=C0111,E501,E241,W503"
+" let g:syntastic_python_checkers=['flake8']
 "let g:syntastic_javascript_checkers = ['jsxhint']
 "let g:jsx_ext_required = 0
 

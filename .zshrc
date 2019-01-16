@@ -5,7 +5,8 @@ export ZSH=~/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -102,16 +103,19 @@ alias rz='source ~/.zshrc'
 # XKOOL
 export XKOOL_ENV='linux'
 alias xkjo='ssh -p4848 lc@139.199.16.240'
-alias xkj='ssh chun@120.77.201.198 -p4848'
+alias xkj='ssh lc@120.77.201.198 -p4848'
 alias xk='cd ~/program/XiaoKu/backend;av'
 alias xka='cd ~/program/XiaoKu/algorithm;av'
 alias xkf='cd ~/program/XiaoKu/frontend'
-alias xkad='cd ~/program/XiaoKu/admin'
+alias xkp='cd ~/program/XiaoKu/ppt_service'
+alias xkin='ssh -p 8738 chun@xkooltest.3322.org'
 
 alias gs='git status'
 alias gco='git checkout'
 alias gd='git diff'
 alias gsu'git submodule update'
+alias gl='git pull --rebase'
+alias grx='git reset -- xkconfig'
 
 alias v='vim'
 
@@ -126,11 +130,11 @@ alias ss2='ss-local -c ~/ss2.config'
 
 alias av='source venv/bin/activate'
 alias dv='deactivate'
-alias vv='virtualenv venv'
+alias vv='virtualenv venv;av'
 
 eval $(thefuck --alias)
 alias f=fuck
-alias grep='grep -n --color --exclude-dir=venv --exclude=*.pyc'
+alias grep='grep -n --color --exclude-dir=venv --exclude-dir=xkconfig --exclude=*.pyc'
 
 # export OPENNI2_REDIST=/usr/local/lib/ni2
 # export OPENNI2_INCLUDE=/usr/local/include/ni2

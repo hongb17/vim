@@ -6,4 +6,4 @@ brew install CMake
 pip3 install powerline-status
 cp .vimrc ~/
 vim README.md
-./bundle/YouCompleteMe/install.py --clang-completer
+python3 ./bundle/YouCompleteMe/install.py --clang-completer
