@@ -24,7 +24,9 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'Valloric/YouCompleteMe'
+
 Plugin 'leafgarland/typescript-vim'
+Plugin 'ambv/black'
 
 "Plugin 'derekwyatt/vim-scala'
 "Plugin 'fatih/vim-go'
@@ -155,6 +157,8 @@ let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_flake8_post_args = "--ignore=C0111,E501,E241,W503"
 "let g:syntastic_javascript_checkers = ['jsxhint']
 "let g:jsx_ext_required = 0
+
+let g:black_linelength = 119
 
 nmap <leader>e :Errors<CR>
 
