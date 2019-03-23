@@ -164,4 +164,6 @@ let g:syntastic_python_flake8_post_args = "--ignore=C0111,E501,E241,W503"
 "let g:jsx_ext_required = 0
 let g:black_linelength=119
 
+let g:black_linelength = 119
+
 nmap <leader>e :Errors<CR>
