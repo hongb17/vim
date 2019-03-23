@@ -81,7 +81,7 @@ alias xkj='ssh lc@120.77.201.198 -p4848'
 alias xk='cd ~/program/XiaoKu/backend;av'
 alias xka='cd ~/program/XiaoKu/algorithm;av'
 alias xkf='cd ~/program/XiaoKu/frontend'
-alias xkp='cd ~/program/XiaoKu/ppt_service'
+alias xkp='cd ~/program/XiaoKu/ppt_service;av'
 alias xkin='ssh -p 8738 chun@xkooltest.3322.org'
 
 # GIT
@@ -99,7 +99,7 @@ alias av='source venv/bin/activate'
 alias dv='deactivate'
 alias vv='virtualenv venv;av'
 
-alias grep='grep -n --color --exclude-dir=venv --exclude-dir=xkconfig --exclude=*.pyc'
+alias grep='grep -n --color --exclude-dir=venv --exclude-dir=xkconfig --exclude-dir=auto_test/test_data --exclude=*.pyc'
 
 eval $(thefuck --alias)
 alias f=fuck
@@ -153,3 +153,4 @@ fi
 # alias goproxy='export http_proxy=http://127.0.0.1:1087 https_proxy=http://127.0.0.1:1087'
 # alias disproxy='unset http_proxy https_proxy'
 
+ctags=/usr/local/bin/ctags

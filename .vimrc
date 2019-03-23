@@ -12,19 +12,25 @@ Plugin 'gmarik/Vundle.vim'
 
 " Plugins
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'Chiel92/vim-autoformat'
+Plugin 'fholgado/minibufexpl.vim'
+"Plugin 'Chiel92/vim-autoformat'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-surround'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'fholgado/minibufexpl.vim'
 Plugin 'Valloric/YouCompleteMe'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
 Plugin 'leafgarland/typescript-vim'
+Plugin 'ambv/black'
 
 "Plugin 'derekwyatt/vim-scala'
 "Plugin 'fatih/vim-go'
@@ -39,7 +45,12 @@ set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
 set encoding=utf-8
 
-syntax on
+" Switch syntax highlighting on, when the terminal has colors
+" Also switch on highlighting the last used search pattern.
+if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
+  syntax on
+endif
+
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
@@ -81,19 +92,9 @@ set novisualbell
 set t_vb=
 set tm=500
 
-" Treat long lines as break lines (useful when moving around in them)
-map j gj
-map k gk
-
 " Use tab to jump between blocks, because it's easier
 nnoremap <tab> %
 vnoremap <tab> %
-
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
-  syntax on
-endif
 
 " Undo
 set undofile                " Save undo's after file closes
@@ -114,6 +115,10 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+"
+" Treat long lines as break lines (useful when moving around in them)
+map j gj
+map k gk
 
 " Copy and paste
 vmap <C-c> "+yi
@@ -135,6 +140,8 @@ let NERDTreeIgnore = ['\.pyc$']
 
 let g:UltiSnipsExpandTrigger="<c-j>"
 
+nnoremap <leader>j :YcmCompleter GoToDeclaration<CR>
+
 set laststatus=2 " Always display the status line
 
 set statusline+=%#warningmsg#
@@ -145,16 +152,16 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 "let g:syntastic_debug = 1
-" Make the scala file save faster.
-"let g:syntastic_mode_map = { "mode": "active",
-"                           \ "active_filetypes": [],
-"                           \ "passive_filetypes": ["scala"] }
+" DO NOT compile java, scala file 
+let g:syntastic_mode_map = { "mode": "active",
+                           \ "active_filetypes": [],
+                           \ "passive_filetypes": ["scala", "java"] }
 "let g:syntastic_python_flake8_exec = 'python3'
 "let g:syntastic_python_flake8_args = ['-m', 'flake8']
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_flake8_post_args = "--ignore=C0111,E501,E241,W503"
 "let g:syntastic_javascript_checkers = ['jsxhint']
 "let g:jsx_ext_required = 0
+let g:black_linelength=119
 
 nmap <leader>e :Errors<CR>
-
