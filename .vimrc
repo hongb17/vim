@@ -141,6 +141,7 @@ let NERDTreeIgnore = ['\.pyc$']
 let g:UltiSnipsExpandTrigger="<c-j>"
 
 nnoremap <leader>j :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>r :YcmCompleter GoToReferences<CR>
 
 set laststatus=2 " Always display the status line
 
@@ -163,7 +164,5 @@ let g:syntastic_python_flake8_post_args = "--ignore=C0111,E501,E241,W503"
 "let g:syntastic_javascript_checkers = ['jsxhint']
 "let g:jsx_ext_required = 0
 let g:black_linelength=119
-
-let g:black_linelength = 119
 
 nmap <leader>e :Errors<CR>
