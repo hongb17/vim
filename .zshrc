@@ -82,7 +82,7 @@ alias rz='source ~/.zshrc'
 
 # XKOOL
 export XKOOL_ENV='linux'
-alias xkj='ssh lc@120.77.201.198 -p4848'
+alias xkj='ssh lc@jump.xkool.ai -p4848'
 alias xk='cd ~/program/XiaoKu/backend;av'
 alias xka='cd ~/program/XiaoKu/algorithm;av'
 alias xkf='cd ~/program/XiaoKu/frontend'

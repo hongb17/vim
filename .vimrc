@@ -13,10 +13,11 @@ Plugin 'gmarik/Vundle.vim'
 " Plugins
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'fholgado/minibufexpl.vim'
-"Plugin 'Chiel92/vim-autoformat'
-Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'scrooloose/syntastic'
+"Plugin 'Chiel92/vim-autoformat'
+"Plugin 'kien/ctrlp.vim'
+"Plugin 'scrooloose/syntastic'
+Plugin 'dense-analysis/ale'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -25,13 +26,13 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'Valloric/YouCompleteMe'
 
-Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'  " git wrapper
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
-Plugin 'leafgarland/typescript-vim'
-Plugin 'ambv/black'
+Plugin 'ambv/black'  " python formatter
 
+"Plugin 'leafgarland/typescript-vim'
 "Plugin 'derekwyatt/vim-scala'
 "Plugin 'fatih/vim-go'
 "Plugin 'pangloss/vim-javascript'
@@ -143,26 +144,35 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 nnoremap <leader>j :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>r :YcmCompleter GoToReferences<CR>
 
-set laststatus=2 " Always display the status line
+"set laststatus=2 " Always display the status line
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
-let g:syntastic_check_on_open = 1
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+
 "let g:syntastic_debug = 1
 " DO NOT compile java, scala file 
-let g:syntastic_mode_map = { "mode": "active",
-                           \ "active_filetypes": [],
-                           \ "passive_filetypes": ["scala", "java"] }
+"let g:syntastic_mode_map = { "mode": "active",
+"                           \ "active_filetypes": [],
+"                           \ "passive_filetypes": ["scala", "java"] }
+"
 "let g:syntastic_python_flake8_exec = 'python3'
 "let g:syntastic_python_flake8_args = ['-m', 'flake8']
-let g:syntastic_python_checkers=['flake8']
-let g:syntastic_python_flake8_post_args = "--ignore=C0111,E501,E241,W503"
+"let g:syntastic_python_checkers=['flake8']
+"let g:syntastic_python_flake8_post_args = "--ignore=C0111,E501,E241,W503"
 "let g:syntastic_javascript_checkers = ['jsxhint']
 "let g:jsx_ext_required = 0
 let g:black_linelength=119
 
 nmap <leader>e :Errors<CR>
+
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\   'python': ['flake8'] }
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
