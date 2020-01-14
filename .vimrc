@@ -14,7 +14,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'Lokaltog/vim-easymotion'
-"Plugin 'Chiel92/vim-autoformat'
+Plugin 'Chiel92/vim-autoformat'
 "Plugin 'kien/ctrlp.vim'
 "Plugin 'scrooloose/syntastic'
 Plugin 'dense-analysis/ale'
@@ -30,7 +30,7 @@ Plugin 'tpope/vim-fugitive'  " git wrapper
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
-Plugin 'ambv/black'  " python formatter
+"Plugin 'ambv/black'  " python formatter
 
 "Plugin 'leafgarland/typescript-vim'
 "Plugin 'derekwyatt/vim-scala'
@@ -166,7 +166,7 @@ nnoremap <leader>r :YcmCompleter GoToReferences<CR>
 "let g:syntastic_python_flake8_post_args = "--ignore=C0111,E501,E241,W503"
 "let g:syntastic_javascript_checkers = ['jsxhint']
 "let g:jsx_ext_required = 0
-let g:black_linelength=119
+"let g:black_linelength=119
 
 nmap <leader>e :Errors<CR>
 
@@ -176,3 +176,5 @@ let g:ale_fixers = {
 \   'python': ['flake8'] }
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
+let g:ale_python_flake8_options ="--ignore=E501,W504,W503,E129,E131,E125"
+let g:ale_open_list = 1

@@ -94,9 +94,9 @@ alias gs='git status'
 alias gco='git checkout'
 alias gd='git diff'
 alias gsu'git submodule update'
-alias gl='git pull'
-alias grh='git reset HEAD'
+# alias gl='git pull --rebase'
 alias grx='git reset -- xkconfig'
+alias grs='git restore --staged'
 
 alias python='python3'
 alias pip='pip3'
@@ -112,7 +112,7 @@ alias f=fuck
 
 alias v='vim'
 
-export PATH="/usr/local/opt/gdal2/bin:$PATH"
+export PATH="/usr/local/opt/gdal2/bin:/usr/local/opt/rabbitmq/sbin:$PATH"
 
 # Mac
 if [ "$(uname)" == "Darwin" ]; then
